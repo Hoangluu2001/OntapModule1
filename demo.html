@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="mobile.js"></script>
+    <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<style>
+    fieldset {
+        width: 300px;
+    }
+
+    input {
+        width: 200px;
+        margin-bottom: 15px;
+    }
+
+    textarea {
+        margin-bottom: 15px;
+        width: 200px;
+        height: 50px;
+        margin-left: 1px;
+    }
+</style>
+<fieldset>
+    <legend>Iphone 12 Pro Max</legend>
+    <p id="displayBatteryIphone"></p>
+    <input type="text" id="inputIphone" oninput="iphone.writeMsg(this.value)" placeholder="write message">
+    <button type="button" onclick="sendMsg(nokia,iphone)">sent</button>
+    <textarea id="outboxIphone" placeholder="hop thu di"></textarea>
+    <textarea id="inboxIphone" placeholder="hop thu den"></textarea>
+    <button type="button" onclick="iphone.onMobile()">On</button>
+    <button type="button" onclick="iphone.offMobile()">Off</button>
+</fieldset>
+
+<fieldset>
+    <legend>Nokia 1280</legend>
+    <p id="displayBatteryNokia"></p>
+    <input type="text" id="inputNokia" oninput="nokia.writeMsg(this.value)" placeholder="write message">
+    <button type="button" onclick="sendMsg(iphone,nokia)">sent</button>
+    <textarea id="outboxNokia" placeholder="hop thu di"></textarea>
+    <textarea id="inboxNokia" placeholder="hop thu den"></textarea>
+    <button type="button" onclick="nokia.onMobile()">On</button>
+    <button type="button" onclick="nokia.offMobile()">Off</button>
+</fieldset>
+</body>
+</html>
